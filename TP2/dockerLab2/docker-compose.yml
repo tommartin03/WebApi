@@ -1,0 +1,23 @@
+version: '3'
+services:
+ php-fpm:
+  build:
+    context: .
+    dockerfile: Dockerfile
+    args:
+      USERNAME: Tom
+      UID: 1047256669
+      EMAIL: tom.martin@etu.univ-orleans.fr
+      NAME: "MARTIN Tom"
+  container_name: WebAPIsLab2
+  command: /bin/bash
+  tty: true
+  stdin_open: true
+  volumes:
+  - .:/var/www/html
+  ports:
+  - "8000:8000"
+  - "8010:8010"
+  environment:
+    PHP_IDE_CONFIG: serverName=webapis
+    PS1: "[ $$(whoami) | $$(pwd) ] "

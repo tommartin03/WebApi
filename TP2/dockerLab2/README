@@ -1,0 +1,21 @@
+INSTRUCTIONS
+
+Il faut modifier les lignes suivantes dans docker-compose.yml.
+Attention !!! USERNAME est votre nom d'utilisateur.
+On obtient cette information en exécutant la commande "id".
+
+args:
+  USERNAME: jean-michel.couvreur
+  UID: 11688
+  EMAIL: jean-michel.couvreur@univ-orleans.fr
+  NAME: "Jean-Michel Couvreur"
+
+Dans cette version (voir docker-compose.yml),
+j'ai appelé le container : WebAPIsLab2
+Il est conseillé de changer ce nom également (et dans la 
+commande ci-dessous)
+
+L'utilisation est toujours
+  docker-compose build
+  docker-compose up -d
+  docker exec -ti WebAPIsLab2s bash
